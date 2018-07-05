@@ -1,0 +1,52 @@
+{
+  "name": "ogs-client",
+  "productName": "OGS",
+  "main": "electron_app/src/electron-main.js",
+  "version": "0.0.2",
+  "description": "OGS Client",
+  "author": "Phil C.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phil-flex/ogs-client"
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "pack:electron": "npm run install:electron && build --win --ia32 --x64",
+    "install:electron": "install-app-deps",
+    "electron": "npm run install:electron && electron ."
+  },
+  "devDependencies": {
+    "electron-builder": "^20.19.1",
+    "electron-builder-squirrel-windows": "^20.19.0",
+    "electron-devtools-installer": "^2.2.0"
+  },
+  "build": {
+    "appId": "ogs.app",
+    "electronVersion": "2.0.4",
+    "asar": false,
+    "files": [
+      "node_modules/**",
+      "src/**",
+      "img/**"
+    ],
+    "extraResources": [
+      "/electron_app/ogs-client/**/*"
+    ],
+    "linux": {
+      "target": "deb",
+      "category": "Game",
+      "maintainer": "philchan2008@gmail.com",
+      "desktop": {
+        "StartupWMClass": "ogs-client"
+      }
+    },
+    "win": {
+      "target": "squirrel"
+    },
+    "directories": {
+      "buildResources": "electron_app/build",
+      "output": "electron_app/dist",
+      "app": "electron_app"
+    }
+  }
+}
