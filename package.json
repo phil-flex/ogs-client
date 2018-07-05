@@ -23,7 +23,7 @@
   "build": {
     "appId": "ogs.app",
     "electronVersion": "2.0.4",
-    "asar": false,
+    "asar": true,
     "files": [
       "node_modules/**",
       "src/**",
