@@ -19,26 +19,7 @@ function safeOpenURL(target) {
         // so we know the url parser has understood all the parts
         // of the input string
         const newTarget = url.format(parsedUrl);
-        const win = new BrowserWindow({
-          autoHideMenuBar: true,
-        });
-        win.on('closed', () => {
-          win = null;
-        });
-        // Load a remote URL
-        win.webContents.on('new-window', onWindowOrNavigate);
-    //    webContents.on('will-navigate', onWindowOrNavigate);
-        win.webContents.on('context-menu', function(ev, params) {
-            if (params.linkURL || params.srcURL) {
-                onLinkContextMenu(ev, params);
-            } else if (params.selectionText) {
-                onSelectedContextMenu(ev, params);
-            } else if (params.isEditable) {
-                onEditableContextMenu(ev, params);
-            }
-        });
-        win.loadURL(newTarget);
-        //shell.openExternal(newTarget);
+        global.mainWindow.loadURL(newTarget);
     }
 }
 
