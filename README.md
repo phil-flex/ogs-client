@@ -1,7 +1,7 @@
 # ogs-client
 OGS Online-go.com Desktop Client
 
-This OGS client actually the electron browser visiting the https://online-go.com site. It can remember the login status and create tray icon in the Desktop, and ease for me to access the OGS. 
+This OGS client actually the electron browser visiting the https://online-go.com site. It can remember the login status and create tray icon in the Desktop. 
 
 Logically this electron project should also support for MacOS, but I don't have it, so haven't tried that.
 
