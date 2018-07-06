@@ -1,7 +1,9 @@
 # ogs-client
 OGS Online-go.com Desktop Client
 
-This OGS client actually the electron browser visit the https://online-go.com site. It can remember the login status and create tray icons in the Desktop. Logically this electron project also works for MacOS, but I don't have it.
+This OGS client actually the electron browser visiting the https://online-go.com site. It can remember the login status and create tray icon in the Desktop, and ease for me to access the OGS. 
+
+Logically this electron project should also support for MacOS, but I don't have it, so haven't tried that.
 
 #Setup
 
@@ -10,9 +12,7 @@ Node.js required
 1. npm install
 2. npm pack:electron
 
-Setup in electron_app/dist/
+Setup files in electron_app/dist/
 
-#Know issues
 
-1. Login page may redirect to new Windows and it is required to refresh the page by using dev tool. (Ctrl-Shift-i) then (Ctrl-R) to refresh page. Once login, it will no need to login again.
-2. It does not support the message notification.
+
