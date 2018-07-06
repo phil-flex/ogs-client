@@ -1,11 +1,11 @@
 # ogs-client
-OGS Online-go.com Desktop Client
+## OGS Online-go.com Desktop Client
 
 This OGS client actually the electron browser visiting the https://online-go.com site. It can remember the login status and create tray icon in the Desktop. 
 
 Logically this electron project should also support for MacOS, but I don't have it, so haven't tried that.
 
-#Setup
+# Setup
 
 Node.js required
 
@@ -14,5 +14,5 @@ Node.js required
 
 Setup files in electron_app/dist/
 
-
-
+# Preview
+https://ibb.co/jCdX2J
